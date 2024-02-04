@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #loading{
+            display: flex;
+            height: 100vh;
+            border: 1px solid red;
+            justify-content: center;
+            align-items:center;
+        }
+        section{
+            border: 1px solid red;
+            height: 20px;
+            background-color: green;
+            margin-right: 600px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <section id="section">
+            
+        </section>
+    </div>
+    
+</body>
+<script>
+    a = 0
+    function loading(){
+      a = a+1
+        console.log(a)
+        var section = document.getElementById("section")
+        if(a<200){
+            section.style.width = a +"px"
+        }
+        else{
+            a =0
+        }
+        
+       
+        
+         
+    }
+  
+    setInterval(loading,10)
+</script>
+</html>
